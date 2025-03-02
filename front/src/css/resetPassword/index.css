@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F3FF;
+    width: 100vw;
+    max-height: 100vh;
+    padding: 20px;
+}
+
+.pack {
+    display: flex;
+    padding: 8px 0 10px 2px;
+    font-weight: 50;
+    font-size:20px;
+    color: #211951;
+    gap: 20px;
+
+}
+
+.main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    height: 100%;
+    padding: 25px;
+    /*border: 2px solid #123;*/
+    border-radius: 10px;
+}
+
+.up {
+    height: 65%;
+
+}
+
+.down {
+    margin: 1px;
+    height: 35%;
+}
+
+
+.up_img {
+    width: 370px;
+    height: 342px;
+    /*min-width: 370px;*/
+    /*min-height: 342px;*/
+    /*max-width: 420px;*/
+    /*max-height: 382px;*/
+
+    img {
+        width: 370px;
+        height: 342px;
+        object-fit: cover;
+    }
+}
+
+.pack {
+    padding: 0.2em 0 1.5em 2em;
+}
+
+
+.down form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 398px;
+    gap: 20px;
+    label {
+        display: none;
+    }
+    input {
+        width: 96%;
+        height: 49px;
+        font-size: 20px;
+        font-weight: 40;
+        padding: 11px 2px;
+        border: 1px solid #836FFF;
+        border-radius: 10px;
+    }
+}
+
+
+#btn {
+    max-width: 80%;
+    height: 52px;
+    border-radius: 25px;
+    background-color: #836FFF;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#msg {
+    font-size: .8em;
+    color: #211951;
+    margin: 20px 10px 10px 20px;
+}
+
+.reset-msg {
+    font-family: Baloo Bhaijaan , serif;
+    margin: .8em auto;
+    font-size: 1.7em;
+    color: #211951;
+}
