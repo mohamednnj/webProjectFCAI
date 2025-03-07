@@ -1,12 +1,16 @@
 /********** Template CSS **********/
+
 :root {
+    --button:#836FFF;
     --primary: #211952;
-    --light: #FFF5F3;
+    --light: #F0F3FF;
     --accent: #15f5b9;
     --dark: #103741;
-    --hover:#15f5b9;
+    --hover:#211952;
 }
-
+body{
+    background-color: var(--light);
+}
 .back-to-top {
     position: fixed;
     display: none;
@@ -102,7 +106,7 @@ h6,
 /*** Navbar ***/
 .navbar .navbar-nav .nav-link {
     padding: 30px 15px;
-    color: white;
+    color: black;
     font-weight: 500;
     outline: none;
 }
@@ -163,7 +167,9 @@ h6,
 }
 
 #Logo{
-    width:80px ;
+    width:69px ;
+    height:66;
+    margin:20px;
 }
 .main-logo-color{
  color: #816efc;
@@ -517,7 +523,10 @@ h6,
     border-right: none;
 }
 #local-nav{
-    background-color:var(--primary);
+    background-color:var(--light);
+    height:106px;
+    box-shadow: 1px 1px 12px #c4bfbf;
+;
 
 }
 #login-icon
@@ -544,3 +553,56 @@ h6,
     position: fixed;
     bottom: 0;
 }
+#search-bar
+{
+    height:54px;
+    width:401px;
+    /*margin-top: 23px;*/
+}
+#form1{
+    height:54px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+#search-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:90px;
+    height:54px;
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color:#836FFF;
+    border-color: white;
+    font-weight: bold
+}
+.ar-placeholder{
+
+}
+#login-button{
+    background-color:white;
+color:var(--button);
+    border-style: solid;
+    border-color: var(--button);
+    /*margin-left:12px;*/
+    width:125px;
+    height:54px;
+ }
+#signup-button{
+    background-color:var(--button);
+    width:125px;
+    height:54px;
+}
+.no-border{
+    border-style: none;
+}
+#navbar-local-inner
+{
+    width: 100%;
+    justify-content: space-around;
+}
+#container-body{
+    margin:0 10px 0 10px
+ }
