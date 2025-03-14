@@ -6,7 +6,11 @@
     --light: #F0F3FF;
     --accent: #15f5b9;
     --dark: #103741;
-    --hover:#211952;
+    --hover: #13e1aa;
+}
+*{
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: var(--light);
@@ -449,6 +453,9 @@ h6,
 
 
 /*** Footer ***/
+#footer
+{
+}
 .footer .btn.btn-social {
     margin-right: 5px;
     width: 45px;
@@ -561,8 +568,14 @@ h6,
 }
 #form1{
     height:54px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius:0 10px 10px 0;
+
+
+}
+#form1:focus, input:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: lightgrey;
 
 }
 #search-button{
@@ -578,11 +591,14 @@ h6,
     border-color: white;
     font-weight: bold
 }
+#search-button:hover{
+    background-color:var(--hover);
+}
 .ar-placeholder{
 
 }
 #login-button{
-    background-color:white;
+    background-color:var(--light);
 color:var(--button);
     border-style: solid;
     border-color: var(--button);
@@ -590,10 +606,20 @@ color:var(--button);
     width:125px;
     height:54px;
  }
+#login-button:hover{
+    background-color:var(--hover);
+    color:white;
+    border-color:white;
+}
 #signup-button{
     background-color:var(--button);
     width:125px;
     height:54px;
+}
+#signup-button:hover{
+    background-color:var(--hover);
+    color:white;
+    border-color:white;
 }
 .no-border{
     border-style: none;
@@ -603,6 +629,6 @@ color:var(--button);
     width: 100%;
     justify-content: space-around;
 }
-#container-body{
-    margin:0 10px 0 10px
- }
+.hide{
+    display:none;
+}
