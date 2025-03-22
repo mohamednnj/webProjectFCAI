@@ -108,3 +108,6 @@ body {
     font-size: 1.7em;
     color: #211951;
 }
+@media screen and (max-width: 800px) {
+
+}
