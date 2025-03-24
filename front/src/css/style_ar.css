@@ -3,6 +3,11 @@
   --primary: #211952;
   --light: #f0f3ff;
   --hover: #211951;
+  --active: #836fff;
+  --muted: #495057;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -10,6 +15,7 @@ body {
   background-color: #fff;
   font-family: "Baloo Bhaijaan 2", -apple-system, Roboto, Helvetica, sans-serif;
   direction: rtl;
+  box-sizing: border-box;
 }
 a:hover,
 a:active {
@@ -42,6 +48,7 @@ button:hover {
   height: 106px;
   position: fixed;
   top: 0;
+  z-index: 11;
 }
 
 .header-container {
