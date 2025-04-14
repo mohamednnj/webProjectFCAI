@@ -57,6 +57,8 @@
 .content-container {
   align-items: normal;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-body {
