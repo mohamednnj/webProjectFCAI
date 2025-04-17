@@ -1,1 +1,147 @@
+.course-content {
+  padding: 2rem 5%;
+}
 
+.course-header {
+  background: linear-gradient(135deg, #4b2a96 0%, #2b4c8c 100%);
+  color: white;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.course-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.course-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.instructor-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.instructor-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--light);
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.video-section {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-player {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+}
+
+#courseVideo {
+  width: 100%;
+  height: 100%;
+}
+
+.video-info {
+  padding: 1.5rem;
+}
+
+.video-controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.control-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--button);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.control-btn:hover {
+  background: var(--hover);
+}
+
+.course-sections {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sections-title {
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.lessons-list {
+  list-style: none;
+  padding: 0;
+}
+
+.lesson {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lesson:hover {
+  background: var(--light);
+}
+
+.lesson.active {
+  background: var(--light);
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.lesson-icon {
+  font-size: 0.8rem;
+  color: var(--button);
+}
+
+.lesson-duration {
+  margin-right: auto;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
