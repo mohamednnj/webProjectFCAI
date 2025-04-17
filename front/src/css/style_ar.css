@@ -7,6 +7,9 @@
   --muted: #495057;
   --mint: #15f5ba;
 }
+a {
+  text-decoration: none;
+}
 html {
   scroll-behavior: smooth;
 }
