@@ -1,147 +1,134 @@
-.course-content {
-  padding: 2rem 5%;
+:root {
+  --button: #836fff;
+  --primary: #211952;
+  --light: #f0f3ff;
+  --hover: #211951;
+  --active: #836fff;
+  --muted: #495057;
+  --mint: #15f5ba;
 }
-
-.course-header {
-  background: linear-gradient(135deg, #4b2a96 0%, #2b4c8c 100%);
-  color: white;
-  padding: 3rem 0;
-  margin-bottom: 2rem;
-}
-
-.course-header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.course-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.course-description {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.instructor-info {
+.content{
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: row;
+  gap:36px;
+  margin:21px 100px 0px 121px;
 }
 
-.instructor-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px solid var(--light);
-}
-
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-}
-
-.video-section {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.video-player {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: #000;
-}
-
-#courseVideo {
-  width: 100%;
-  height: 100%;
-}
-
-.video-info {
-  padding: 1.5rem;
-}
-
-.video-controls {
+.right-content{
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-direction: column;
+  margin:59px 18px 0 17px;
 }
-
-.control-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  background: var(--button);
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.control-btn:hover {
-  background: var(--hover);
-}
-
-.course-sections {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.sections-title {
-  margin-bottom: 1.5rem;
-  color: var(--primary);
-}
-
-.section {
-  margin-bottom: 1.5rem;
-}
-
-.section-title {
-  font-size: 1.1rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.lessons-list {
-  list-style: none;
-  padding: 0;
-}
-
-.lesson {
+.left-content{
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.75rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
+  flex-direction: column;
 }
 
-.lesson:hover {
-  background: var(--light);
+.right-card{
+  border-width: 1px;
+  box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.25);
+  width: 412px;
+  height: 683px;
+  flex-shrink: 0;
+  border-radius: 30px;
 }
+#subscribe{
+width: 95%;
+border-radius: 23px;
 
-.lesson.active {
-  background: var(--light);
-  color: var(--primary);
-  font-weight: 500;
 }
-
-.lesson-icon {
-  font-size: 0.8rem;
-  color: var(--button);
-}
-
-.lesson-duration {
-  margin-right: auto;
+.bottom-right-section{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 29px;
   color: var(--muted);
-  font-size: 0.9rem;
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.bottom-right-section span img {
+margin-left: 5px;
+}
+#person-icon{
+  margin-right: 4px;
+}
+#title{
+  color: var(--primary);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#right-description{
+  color: var(--muted);
+  text-align: right;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom:30px;
+}
+
+.left-text{
+  display: flex;
+  flex-direction: column;
+  margin:40px 0 0 0;
+  color: black;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.first-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.second-text{
+  margin-right:40px;
+}
+
+#left-description{
+  color: var(--muted);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin:8px 0 0 0;
+}
+
+.instructor{
+  display: flex;
+  flex-direction: row;
+  margin-top:21px;
+}
+
+.text-instructor{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-top: -14px;
+}
+
+.instructor-name{
+  color: var(--primary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.instructor-job{
+  color: var(--button);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -10px;
+
 }
