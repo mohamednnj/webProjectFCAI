@@ -214,6 +214,9 @@
 .card {
   margin-right: 100px;
 }
+.responsive-container{
+  display: none;
+}
 @media (max-width: 1027px) {
   .content-container {
     display: none;
@@ -225,7 +228,7 @@
     flex-direction: column;
   }
 
-  #login-to-account {
+  #create-account {
     text-align: center;
     padding-top: 25px;
     font-size: 24px;
@@ -238,7 +241,7 @@
     height: 33px !important;
   }
 
-  .login-buttons {
+  .sign-up-buttons {
     display: inline-flex;
     justify-content: center;
     gap: 28px;
@@ -260,13 +263,19 @@
     border: none;
   }
 
-  .sign-in-container {
+  .sign-up-container {
     display: flex;
     flex-direction: column;
     gap: 26px;
     padding-top: 20px;
+    padding-bottom:23px;
   }
-
+#username{
+  width: 378px;
+  height: 49px;
+  border-radius: 10px;
+  border: 1px solid var(--button);
+}
   #email-responsive {
     width: 378px;
     height: 49px;
@@ -279,16 +288,6 @@
     height: 49px;
     border-radius: 10px;
     border: 1px solid var(--button);
-  }
-
-  .adds-login {
-    width: 100%;
-    display: flex;
-    gap: 61px;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 28px;
-    padding-bottom: 27px;
   }
 
   #forgot-pass {
@@ -320,7 +319,7 @@
 
   }
 
-  #login-btn-responsive {
+  #signUp-btn-responsive {
 
     width: 312px;
     height: 52px;
@@ -329,6 +328,7 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
+
   }
 
   .no-account {
