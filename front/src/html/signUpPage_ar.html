@@ -26,44 +26,73 @@
 </head>
 
 <body>
-    <!-- Navbar Start-->
-    <div style="height:106px">.
-        <header class="site-header">
-            <div class="header-container">
-                <div class="right-nav">
-                    <a href="../index.html" class="navbar-brand">
+<!-- Navbar Start-->
+<!--responsive start-->
+<!--Hamburger Menu Start-->
+<div class="header">
+    <div class="off-screen-menu">
+        <ul>
+            <a href="../html/AllCourses.html">
+                <li>تصفح المسارات</li>
+            </a>
+            <a href="../index.html">
+                <li>الرئيسية</li>
+            </a>
+            <a href="../html/about.html">
+                <li>عننا</li>
+            </a>
+        </ul>
+    </div>
+    <nav class="hamburger-btn">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
 
-                        <h1 class="main-logo-color" id="logo-text">
-                            <i>
-                                <img src="../image/Logo.png" id="Logo" alt="Logo">
-                            </i>
+        </div>
+    </nav>
+    <a href="../index.html" class="navbar-brand">
+        <img src="../image/Logo.png" id="Logo" alt="Logo">
+    </a>
+</div>
 
-                        </h1>
-                    </a>
-                    <nav class="nav-section">
-                        <a href="../index.html" class="nav-link">الصفحة الرئيسية </a>
-                    </nav>
-                </div>
-
-
-                <div class="auth-section">
-                    <div class="auth-buttons">
-
-                        <a href="#" class="lang-link">
-                            <img class="lang" src="../image/united-kingdom%20(1).png" alt="arabic-language">
-                        </a>
-                        <a href="loginPage_ar.html">
-                            <button class="btn-outline auth-header" id="login-btn">تسجيل دخول</button>
-                        </a>
-                        <a href="signupPage_ar.html">
-                            <button class="btn-primary auth-header">إنشاء حساب</button>
-                        </a>
-                    </div>
+<!--Hamburger Menu End-->
+<!--responsive End-->
+<div style="height:106px">.
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../index.html" class="navbar-brand">
+                <h1 class="main-logo-color" id="logo-text">
+                    <i>
+                        <img src="../image/Logo.png" id="Logo" alt="Logo">
+                    </i>
+                </h1>
+            </a>
+            <nav class="nav-section">
+                <a href="../html/AllCourses.html" class="nav-link">تصفّح المسارات</a>
+            </nav>
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="ابحث عن ....">
+                    <button class="search-button">ابحث</button>
                 </div>
             </div>
-        </header>
-    </div>
-    <!-- Navbar End -->
+            <a href="../html/base-en.html" class="lang-link">
+                <img class="lang" src="../image/united-kingdom%20(1).png" alt="arabic-language">
+            </a>
+            <div class="auth-section">
+                <div class="auth-buttons">
+                    <a href="../html/loginPage_ar.html">
+                        <button class="btn-outline auth-header" id="login-btn">تسجيل دخول</button>
+                    </a>
+                    <a href="../html/signUpPage_ar.html">
+                        <button class="btn-primary auth-header">إنشاء حساب</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
     <!-- Content Start -->
     <div class="content-container">
         <div class="right">
@@ -112,6 +141,36 @@
             </div>
         </div>
     </div>
+    <!--responsive content start-->
+    <div class="responsive-container">
+        <div class="loginImage">
+            <img src="../image/LoginPage/Responsive/loginImage.svg" alt="loginImage">
+        </div>
+        <span id="login-to-account">سجل في حسابك</span>
+        <div class="login-buttons">
+            <button class="google-login">Google<img src="../image/Google%20Plus.png"></button>
+            <button class="facebook-login">Facebook<img src="../image/facebook.svg"></button>
+        </div>
+        <div class="sign-in-container">
+            <input id="email-responsive" type="text" placeholder="البريد الالكتروني">
+            <input id="password-responsive" type="text" placeholder="كلمة المرور">
+        </div>
+        <div class="adds-login">
+            <div class="remember-me">
+                <input type="checkbox" id="remember-me"><label for="remember-me">تذكرني</label>
+            </div>
+            <p id="forgot-pass">هل نسيت كلمة المرور؟</p>
+        </div>
+        <button class="btn-primary" id="login-btn-responsive">تسجيل الدخول</button>
+        <div class="no-account">
+            <p>ليس لديك حساب؟ <span><a href="signUpPage_ar.html">
+                                    سجل الاّن
+                                </a></span></p>
+        </div>
+    </div>
+
+
+    <!--responsive content End-->
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
@@ -132,6 +191,7 @@
     </footer>
 
     <script src='../js/main.js'></script>
+<script src="../js/header.js"></script>
 </body>
 
 </html>

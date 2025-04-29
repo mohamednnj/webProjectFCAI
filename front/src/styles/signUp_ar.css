@@ -214,3 +214,139 @@
 .card {
   margin-right: 100px;
 }
+@media (max-width: 1027px) {
+  .content-container {
+    display: none;
+  }
+
+  .responsive-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #login-to-account {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary);
+  }
+
+
+  .unknown {
+    height: 33px !important;
+  }
+
+  .login-buttons {
+    display: inline-flex;
+    justify-content: center;
+    gap: 28px;
+    padding-top: 13px;
+  }
+
+  .google-login {
+    width: 175px;
+    height: 53px;
+    border-radius: 10px;
+    border: none;
+
+  }
+
+  .facebook-login {
+    width: 175px;
+    height: 53px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .sign-in-container {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding-top: 20px;
+  }
+
+  #email-responsive {
+    width: 378px;
+    height: 49px;
+    border-radius: 10px;
+    border: 1px solid var(--button);
+  }
+
+  #password-responsive {
+    width: 378px;
+    height: 49px;
+    border-radius: 10px;
+    border: 1px solid var(--button);
+  }
+
+  .adds-login {
+    width: 100%;
+    display: flex;
+    gap: 61px;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 27px;
+  }
+
+  #forgot-pass {
+    color: #C81717;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 0;
+
+  }
+
+  .remember-me {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+
+  }
+
+
+  .remember-me label {
+    color: var(--button);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+  }
+
+  #login-btn-responsive {
+
+    width: 312px;
+    height: 52px;
+    border-radius: 100px;
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .no-account {
+    padding-top: 25.5px;
+  }
+
+  .no-account p {
+    color: var(--button);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .no-account span a{
+    color: var(--mint);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+
+  }
+
+}
