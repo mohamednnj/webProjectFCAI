@@ -443,16 +443,30 @@ button:hover {
     border-radius: 10px;
     font-size: 18px;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+
 }
 #scrlUp.visible {
     opacity: 1;
-    display: block;
+    transform: translateY(0);
 }
 #scrlUp:hover {
     background-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
 }
 
+#scrlUp:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#scrlUp.focused {
+    outline: 2px solid var(--mint);
+    outline-offset: 2px;
+}
 .arrow {
     border: solid white;
     border-width: 0 3px 3px 0;
