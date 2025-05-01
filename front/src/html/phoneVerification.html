@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التحقق من رقم الهاتف - U-learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="../styles/Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/style_ar.css" rel="stylesheet">
+    <link href="../styles/phone_verification.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="verification-box">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../image/Logo.png" id="Logo" alt="شعار U-learning">
+            </a>
+
+            <div class="back-button">
+                <a href="forgotPassword.html">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <h2>التحقق من رقم الهاتف</h2>
+            <p class="subtitle">تم إرسال رمز التحقق إلى <span id="userPhone">+00 000 000 0000</span></p>
+
+            <div class="verification-image">
+                <img src="../image/reset_password/verification.svg" alt="صورة التحقق">
+            </div>
+            
+            <form id="verificationForm">
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" class="otp-input" required>
+                    <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" class="otp-input" required>
+                    <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" class="otp-input" required>
+                    <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" class="otp-input" required>
+                </div>
+
+                <button type="submit" class="verify-btn">تأكيد الرمز</button>
+            </form>
+
+            <div class="resend-code">
+                <span id="timer">00:00</span>
+                <button id="resendButton" disabled>إعادة إرسال رمز التحقق</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/phone_verification.js"></script>
+</body>
+</html> 
