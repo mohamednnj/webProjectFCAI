@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaijaan 2", -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.checkout-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.checkout-box .navbar-brand {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#Logo {
+    width: 69px;
+    height: 66px;
+}
+
+.back-button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.back-button a {
+    color: var(--primary);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+    color: var(--button);
+}
+
+h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.checkout-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+/* Course Summary Styles */
+.course-summary {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.course-info {
+    margin-bottom: 20px;
+}
+
+.course-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.course-details h3 {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.instructor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instructor img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.instructor-details {
+    flex: 1;
+}
+
+.instructor-name {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.instructor-title {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.price-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.price-row.total {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+/* Payment Form Styles */
+.payment-form {
+    padding: 20px;
+}
+
+.payment-form h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+    border-color: var(--button);
+}
+
+.payment-method input[type="radio"] {
+    display: none;
+}
+
+.payment-method input[type="radio"]:checked + .method-icon {
+    color: var(--button);
+}
+
+.payment-method input[type="radio"]:checked + .method-icon + .method-name {
+    color: var(--button);
+}
+
+.method-icon {
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.method-name {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 45px 15px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--button);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(131, 111, 255, 0.2);
+}
+
+.card-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--button);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.pay-btn:hover {
+    background: var(--hover);
+}
+
+@media (max-width: 768px) {
+    .checkout-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .checkout-box {
+        padding: 20px;
+    }
+    
+    .back-button {
+        top: 20px;
+        right: 20px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .payment-methods {
+        grid-template-columns: 1fr;
+    }
+}

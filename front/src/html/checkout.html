@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع - U-learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="../styles/Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/style_ar.css" rel="stylesheet">
+    <link href="../styles/checkout.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="checkout-box">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../image/Logo.png" id="Logo" alt="شعار U-learning">
+            </a>
+
+            <div class="back-button">
+                <a href="javascript:history.back()">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <h2>إتمام عملية الشراء</h2>
+
+            <div class="checkout-content">
+                <!-- Course Summary Section -->
+                <div class="course-summary">
+                    <div class="course-info">
+                        <img id="courseImage" src="" alt="صورة الكورس" class="course-image">
+                        <div class="course-details">
+                            <h3 id="courseName">اسم الكورس</h3>
+                            <div class="instructor">
+                                <img id="instructorImage" src="" alt="صورة المدرب">
+                                <div class="instructor-details">
+                                    <div id="instructorName" class="instructor-name">اسم المدرب</div>
+                                    <div id="instructorTitle" class="instructor-title">المسمى الوظيفي</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-summary">
+                        <div class="price-row">
+                            <span>سعر الكورس</span>
+                            <span id="coursePrice">500 جنيه</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>الإجمالي</span>
+                            <span id="totalPrice">500 جنيه</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Form Section -->
+                <form id="paymentForm" class="payment-form">
+                    <h3>تفاصيل الدفع</h3>
+                    
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="paymentMethod" value="card" checked>
+                            <span class="method-icon"><i class="fas fa-credit-card"></i></span>
+                            <span class="method-name">بطاقة ائتمان</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="paymentMethod" value="vodafone">
+                            <span class="method-icon"><i class="fas fa-wallet"></i></span>
+                            <span class="method-name">فودافون كاش</span>
+                        </label>
+                    </div>
+
+                    <!-- Card Payment Fields -->
+                    <div id="cardFields" class="payment-fields">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="cardName" placeholder="الاسم على البطاقة" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-credit-card"></i>
+                            <input type="text" id="cardNumber" placeholder="رقم البطاقة" maxlength="19" required>
+                        </div>
+                        <div class="card-extra">
+                            <div class="input-group">
+                                <i class="fas fa-calendar"></i>
+                                <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vodafone Cash Fields -->
+                    <div id="vodafoneFields" class="payment-fields" style="display: none;">
+                        <div class="input-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phoneNumber" placeholder="رقم الهاتف" pattern="[0-9]{11}" maxlength="11" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="pay-btn">إتمام الدفع</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>
