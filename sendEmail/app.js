@@ -1,105 +1,65 @@
-//
-// const Mailjet = require('node-mailjet');
-//
-// const mailjet = new Mailjet({
-//   apiKey: '8d1b9ec35a2caad968e9b59c2f306cfa',
-//   apiSecret: 'dd5d44ca5c062381b176e0907c929774',
-// });
-//
-// mailjet
-//     .post('send', { version: 'v3.1' })
-//     .request({
-//       Messages: [
-//         {
-//           From: {
-//             Email: 'mohamedelsary960@gmail.com',
-//             Name: 'mohamedelsary'
-//           },
-//           To: [
-//             {
-//               Email: 'cotiva.usc@gmail.com',
-//               Name: 'cotiva'
-//             }
-//           ],
-//           Subject: 'Hello from Mailjet and Node.js!',
-//           TextPart: 'This is a plain text email body.',
-//           HTMLPart: '<h3>This is an HTML email body.</h3>'
-//         }
-//       ]
-//     })
-//     .then(result => {
-//       console.log('✅ Email sent successfully:', result.body);
-//     })
-//     .catch(err => {
-//       console.error('❌ Error sending email:', err.statusCode, err.response?.data || err.message);
-//     });
-/**
- *
- * This call sends a message to one recipient.
- *
- */
-// const mailjet = require ('node-mailjet')
-//     .connect("8d1b9ec35a2caad968e9b59c2f306cfa", "dd5d44ca5c062381b176e0907c929774")
-// const request = mailjet
-//     .post("send", {'version': 'v3.1'})
-//     .request({
-//         "Messages":[
-//             {
-//                 "From": {
-//                     Email: 'mohamedelsary960@gmail.com',
-//                     Name: 'mohamedelsary'
-//                 },
-//                 "To": [
-//                     {
-//                         Email: 'cotiva.usc@gmail.com',
-//                         Name: 'cotiva'
-//                     }
-//                 ],
-//                 "Subject": "Your email flight plan!",
-//                 "TextPart": "Dear passenger 1, welcome to Mailjet! May the delivery force be with you!",
-//                 "HTMLPart": "<h3>Dear passenger 1, welcome to <a href=\"https://www.mailjet.com/\">Mailjet</a>!</h3><br />May the delivery force be with you!"
-//             }
-//         ]
-//     })
-// request
-//     .then((result) => {
-//         console.log(result.body)
-//     })
-//     .catch((err) => {
-//         console.log(err.statusCode)
-//     })
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
 const Mailjet = require('node-mailjet');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Mailjet API keys
 const mailjet = Mailjet.apiConnect(
     process.env.MJ_APIKEY_PUBLIC,
-    process.env.MJ_APIKEY_PRIVATE,
+    process.env.MJ_APIKEY_PRIVATE
 );
 
-const request = mailjet
-    .post('send', { version: 'v3.1' })
-    .request({
-        Messages: [
-            {
-                From: {
-                    Email: "pilot@mailjet.com",
-                    Name: "Mailjet Pilot"
-                },
-                To: [
-                    {
-                        Email: "passenger1@mailjet.com",
-                        Name: "passenger 1"
-                    }
-                ],
-                Subject: "Your email flight plan!",
-                TextPart: "Dear passenger 1, welcome to Mailjet! May the delivery force be with you!",
-                HTMLPart: "<h3>Dear passenger 1, welcome to <a href=\"https://www.mailjet.com/\">Mailjet</a>!</h3><br />May the delivery force be with you!"
-            }
-        ]
-    })
+// Middleware for parsing form data
+app.use(bodyParser.urlencoded({ extended: true }));
 
-request
-    .then((result) => {
-        console.log(result.body)
-    })
-    .catch((err) => {
-        console.log(err.statusCode)
-    })
+// Set EJS as the templating engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Route to the form page
+app.get('/', (req, res) => {
+    res.render('emailForm', { message: null });
+});
+
+// Route to handle the email sending
+app.post('/send-email', async (req, res) => {
+    const { toEmail, toName, subject, textContent, htmlContent } = req.body;
+
+    try {
+        const result = await mailjet.post('send', { version: 'v3.1' })
+            .request({
+                Messages: [
+                    {
+                        From: {
+                            Email: process.env.FROM_EMAIL,
+                            Name: 'Your Name or App',
+                        },
+                        To: [
+                            {
+                                Email: toEmail,
+                                Name: toName,
+                            },
+                        ],
+                        Subject: subject,
+                        TextPart: textContent,
+                        HTMLPart: htmlContent,
+                    },
+                ],
+            });
+
+        console.log('Email sent successfully:', result.body);
+        res.render('emailForm', { message: 'Email sent successfully!' });
+    } catch (err) {
+        console.error('Failed to send email:', err.statusCode, err.response?.data || err.message);
+        res.render('emailForm', { message: 'Failed to send email. Please try again.' });
+    }
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
