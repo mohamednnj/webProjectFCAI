@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>U-learning - اتصل بنا</title>
+    <title>U-learning - انضم كمحاضر</title>
     <link rel="icon" href="../image/Logo.png" type="image/icon type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -12,7 +12,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="../styles/Bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../styles/style_ar.css" rel="stylesheet">
-    <link href="../styles/contact.css" rel="stylesheet">
+    <link href="../styles/join_as_instructor.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,7 +35,6 @@
                 <span></span>
                 <span></span>
                 <span></span>
-
             </div>
         </nav>
         <a href="../index.html" class="navbar-brand">
@@ -43,8 +42,6 @@
         </a>
     </div>
 
-    <!--Hamburger Menu End-->
-    <!--responsive End-->
     <div style="height:106px">.
         <header class="site-header">
             <div class="header-container">
@@ -65,90 +62,100 @@
                     </div>
                 </div>
                 <!-- <a href="../html/base-en.html" class="lang-link">
-                <img class="lang" src="../image/united-kingdom%20(1).png" alt="arabic-language">
-            </a> -->
+                    <img class="lang" src="../image/united-kingdom%20(1).png" alt="arabic-language">
+                </a> -->
                 <div class="auth-section">
                     <div class="auth-buttons">
                         <a href="../html/loginPage_ar.html">
                             <button class="btn-outline auth-header" id="login-btn">تسجيل دخول</button>
                         </a>
                         <a href="../html/signUpPage_ar.html">
-                            <button class="btn-primary auth-header">إنشاء حساب</button>
+                            <button class="btn-primary auth-header" aria-label="إنشاء حساب جديد">إنشاء حساب</button>
                         </a>
                     </div>
                 </div>
             </div>
         </header>
     </div>
-    <!-- Navbar End -->
 
-
-    <!-- Contact Content Start -->
-    <main class="contact-content">
-        <div class="contact-container">
-            <section class="contact-header">
-                <h1 class="contact-title">اتصل بنا</h1>
-                <p class="contact-subtitle">نحن هنا لمساعدتك والإجابة على استفساراتك</p>
+    <!-- Main Content Start -->
+    <main class="instructor-content">
+        <div class="instructor-container">
+            <section class="instructor-header">
+                <h1 class="instructor-title">انضم إلى فريق المحاضرين</h1>
+                <p class="instructor-subtitle">شارك معرفتك وخبراتك مع المتعلمين حول العالم</p>
             </section>
 
-            <div class="contact-grid">
-                <section class="contact-form-section">
-                    <div class="contact-form-card">
-                        <h2>أرسل رسالة</h2>
-                        <form class="contact-form">
+            <div class="instructor-grid">
+                <section class="benefits-section">
+                    <div class="benefits-card">
+                        <h2>مميزات الانضمام</h2>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="benefit-details">
+                                    <h3>تأثير إيجابي</h3>
+                                    <p>ساعد الآخرين في تحقيق أهدافهم التعليمية</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div class="benefit-details">
+                                    <h3>دخل إضافي</h3>
+                                    <p>اكسب دخلاً من خلال مشاركة خبراتك</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-users"></i>
+                                <div class="benefit-details">
+                                    <h3>مجتمع متعلم</h3>
+                                    <p>انضم إلى مجتمع من المحاضرين المحترفين</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="application-section">
+                    <div class="application-card">
+                        <h2>تقديم طلب الانضمام</h2>
+                        <form class="application-form">
                             <div class="form-group">
-                                <label for="name">الاسم</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="fullName">الاسم الكامل</label>
+                                <input type="text" id="fullName" name="fullName" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">البريد الإلكتروني</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="subject">الموضوع</label>
-                                <input type="text" id="subject" name="subject" required>
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone" name="phone" required>
                             </div>
                             <div class="form-group">
-                                <label for="message">الرسالة</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="specialization">التخصص</label>
+                                <input type="text" id="specialization" name="specialization" required>
                             </div>
-                            <button type="submit" class="btn-primary">إرسال الرسالة</button>
+                            <div class="form-group">
+                                <label for="experience">سنوات الخبرة</label>
+                                <input type="number" id="experience" name="experience" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">نبذة عنك</label>
+                                <textarea id="bio" name="bio" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="cv">السيرة الذاتية (PDF)</label>
+                                <input type="file" id="cv" name="cv" accept=".pdf" required>
+                            </div>
+                            <button type="submit" class="btn-primary">تقديم الطلب</button>
                         </form>
-                    </div>
-                </section>
-
-                <section class="contact-info-section">
-                    <div class="info-card">
-                        <h2>معلومات التواصل</h2>
-                        <div class="info-items">
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <div class="info-details">
-                                    <h3>البريد الإلكتروني</h3>
-                                    <p>info@u-learning.com</p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-phone"></i>
-                                <div class="info-details">
-                                    <h3>رقم الهاتف</h3>
-                                    <p>+20 123 456 789</p>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="info-details">
-                                    <h3>العنوان</h3>
-                                    <p>القاهرة، مصر</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </div>
         </div>
     </main>
-    <!-- Contact Content End -->
+    <!-- Main Content End -->
 
     <!-- Footer -->
     <footer class="site-footer">

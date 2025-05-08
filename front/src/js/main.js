@@ -30,7 +30,7 @@ const handleScroll = debounce(() => {
         scrollUpButton.classList.remove("visible");
         // Hide the button after animation completes
         scrollTimeout = setTimeout(() => {
-            scrollUpButton.style .display = "none";
+            scrollUpButton.style.display = "none";
         }, 300); // Match this with your CSS transition duration
     }
 }, 100);
