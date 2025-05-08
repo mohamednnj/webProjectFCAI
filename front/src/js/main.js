@@ -90,39 +90,26 @@ window.addEventListener('unload', () => {
     window.removeEventListener('scroll', handleScroll);
 });
 
-// search functionality
+// Handle search functionality
 const searchInput = document.querySelector('.search-input');
 const searchButton = document.querySelector('.search-button');
 
 if (searchInput && searchButton) {
-    searchButton.addEventListener('click', () => {
+    searchButton.addEventListener('click', function() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
-            // Add loading state
-            searchButton.disabled = true;
-            searchButton.textContent = 'جاري البحث...';
-            
-            // Simulate search (replace with actual search implementation)
-            setTimeout(() => {
-                // Reset button state
-                searchButton.disabled = false;
-                searchButton.textContent = 'ابحث';
-                
-                // Show results or error message
-                if (searchTerm.length < 2) {
-                    alert('الرجاء إدخال كلمة بحث مكونة من حرفين على الأقل');
-                } else {
-                    // Implement actual search logic here
-                    console.log('Searching for:', searchTerm);
-                }
-            }, 500);
+            // Implement search functionality here
+            console.log('Searching for:', searchTerm);
         }
     });
 
-    // Add keyboard support for search
-    searchInput.addEventListener('keydown', (e) => {
+    searchInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
-            searchButton.click();
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm) {
+                // Implement search functionality here
+                console.log('Searching for:', searchTerm);
+            }
         }
     });
 }

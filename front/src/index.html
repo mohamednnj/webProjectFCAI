@@ -34,19 +34,16 @@
     <button onclick="topFunction()" id="scrlUp" title="Go to top" aria-label="الانتقال إلى أعلى الصفحة"><i
             class="arrow up"></i></button>
     <div class="header">
-        <div class="off-screen-menu" role="navigation" aria-label="القائمة الرئيسية">
-            <ul>
-                <a href="html/AllCourses.html">
-                    <li>تصفح المسارات</li>
-                </a>
-                <a href="index.html">
-                    <li>الرئيسية</li>
-                </a>
-                <a href="html/about.html">
-                    <li>عننا</li>
-                </a>
-            </ul>
+        <a href="index.html" class="navbar-brand" aria-label="الصفحة الرئيسية">
+            <img src="image/Logo.png" id="Logo" alt="شعار U-learning">
+        </a>
+        <div class="header-search">
+            <input type="text" class="search-input" placeholder="ابحث عن ...." aria-label="بحث">
+            <button class="search-button" aria-label="تنفيذ البحث">ابحث</button>
         </div>
+        <a href="html/loginPage_ar.html" class="profile-icon" aria-label="الملف الشخصي">
+            <i class="fas fa-user"></i>
+        </a>
         <nav class="hamburger-btn" aria-label="قائمة الهاتف المحمول">
             <div class="hamburger" role="button" aria-expanded="false" aria-controls="off-screen-menu">
                 <span></span>
@@ -54,9 +51,20 @@
                 <span></span>
             </div>
         </nav>
-        <a href="index.html" class="navbar-brand" aria-label="الصفحة الرئيسية">
-            <img src="image/Logo.png" id="Logo" alt="شعار U-learning">
-        </a>
+    </div>
+
+    <div class="off-screen-menu" role="navigation" aria-label="القائمة الرئيسية">
+        <ul>
+            <a href="html/AllCourses.html">
+                <li>تصفح المسارات</li>
+            </a>
+            <a href="index.html">
+                <li>الرئيسية</li>
+            </a>
+            <a href="html/about.html">
+                <li>عننا</li>
+            </a>
+        </ul>
     </div>
 
     <div style="height:106px">
@@ -78,9 +86,6 @@
                         <button class="search-button" aria-label="تنفيذ البحث">ابحث</button>
                     </div>
                 </div>
-                <!-- <a href="html/base-en.html" class="lang-link" aria-label="تغيير اللغة إلى الإنجليزية">
-                    <img class="lang" src="image/united-kingdom%20(1).png" alt="اللغة الإنجليزية">
-                </a> -->
                 <div class="auth-section">
                     <div class="auth-buttons">
                         <a href="html/loginPage_ar.html">
@@ -109,8 +114,9 @@
                         الاحتراف، بأسلوب بسيط وسهل يناسب المبتدئين.
                     </p>
                     <div class="cta-container">
-
-                        <button class="cta-button">انضم الآن</button>
+                        <a href="html/AllCourses.html">
+                            <button class="cta-button">انضم الآن</button>
+                        </a>
                     </div>
                 </div>
             </section>

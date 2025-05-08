@@ -272,16 +272,61 @@
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-  .features-container,
+  .content-container {
+    flex-direction: column;
+    width: 95vw;
+    text-align: center;
+  }
+
+  .text-section,
+  .image-section {
+    width: 100%;
+  }
+
+  .text-content {
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
   .courses-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .course-image {
+    height: 35vh;
   }
 }
 
 @media (max-width: 768px) {
-  .features-container,
-  .courses-container {
-    grid-template-columns: 1fr;
+  .content-container {
+    padding: 0 15px;
+  }
+
+  .text-content {
+    margin-top: 60px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
   }
 
   .section-title {
@@ -292,8 +337,136 @@
     font-size: 1.5rem;
   }
 
-  .footer-link {
-    display: block;
-    margin: 10px 0;
+  .features-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feature-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .courses-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .course-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .course-image {
+    height: 30vh;
+  }
+
+  .course-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .course-actions {
+    flex-direction: column;
+  }
+
+  .course-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    padding: 0 8px;
+  }
+
+  .content-container::after {
+    width: 180px;
+    height: 220px;
+    bottom: -19%;
+  }
+
+  .journey-section::after {
+    width: 15vw;
+    max-width: 150px;
+    height: 220px;
+  }
+
+  .text-content {
+    margin-top: 40px;
+  }
+
+  .main-title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .section-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .feature-card {
+    padding: 15px;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .feature-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+
+  .course-image {
+    height: 25vh;
+  }
+
+  .course-info {
+    padding: 15px;
+  }
+
+  .course-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .course-price {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .instructor-name {
+    font-size: 0.8rem;
+  }
+
+  .instructor-title {
+    font-size: 0.7rem;
+  }
+
+  .instructor img {
+    width: 40px;
+    height: 40px;
   }
 }
